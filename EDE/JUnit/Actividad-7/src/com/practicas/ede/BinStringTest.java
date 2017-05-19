@@ -6,31 +6,41 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.Test;
 
 public class BinStringTest {
 
 	private BinString binString;
 	
+	
 	public BinStringTest(){
-		// Completar
+		
+		binString = new BinString();
+		
 	}
 	
 	@Test
 	public void  sumarTest(){
 		// Test de la función sumar
-
+		int expected = 292;		
+		
+		assertEquals(expected, binString.sumar("aba"), 0.1);
+		//expected = 100;
 	}
 	
 	@Test
 	public void aBinarioTest() {
-		// Test de la función aBinario
+		
+		String expected = "100100100";
+		
+		assertEquals(expected, binString.aBinario(292));
 
 	}
 	
 	@Test
 	public void convertirTest() {
 		// Test de la función convertirTest
-
+		String expected = "100100100";
+		
+		assertEquals(expected, binString.convertir("aba"));
 	}
 }
